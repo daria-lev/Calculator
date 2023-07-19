@@ -15,4 +15,26 @@ public class Calculate {
     public boolean validOp(String op){
         return operators.containsKey(op) || op.equalsIgnoreCase(")");
     }
+
+    public String calculateOne(String val1, String op, String val2){
+        double first = Double.parseDouble(val1);
+        double second = Double.parseDouble(val2);
+        double output = 0;
+        if(op.equalsIgnoreCase("+")){
+            output = first + second;
+        }
+        if(op.equalsIgnoreCase("-")){
+            output = first - second;
+        }
+        if(op.equalsIgnoreCase("*")){
+            output = first * second;
+        }
+        if(op.equalsIgnoreCase("/")){
+            output = first / second;
+        }
+        if(op.equalsIgnoreCase("^")){
+            output = Math.pow(first, second);
+        }
+        return Double.toString(output);
+    }
 }

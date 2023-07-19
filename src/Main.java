@@ -22,7 +22,7 @@ public class Main {
                     continue;
                 }
                 System.out.println("valid statement");
-
+                System.out.println(calc.calculateOne(parts[0], parts[1], parts[2]));
 
             }
         }
@@ -35,25 +35,34 @@ public class Main {
         int cur = 0;
         int numParen = 0;
         for (String s : parts) {
-            if(s.matches("-?\\d+")){ //if it's an integer
+            /*if(s.matches("-?\\d+")){ //if it's an integer //need to change to allow doubles eventually
                 cur = 0;
+            }*/
+            cur = 0;
+            try
+            {
+                Double.parseDouble(s);
             }
-            else if(calc.validOp(s)){ //if it's an operator
-                if(s.equalsIgnoreCase("(")){
-                    cur = 2;
-                    numParen++;
+            catch(NumberFormatException e)
+            {
+                //not a double
+                if(calc.validOp(s)){ //if it's an operator
+                    if(s.equalsIgnoreCase("(")){
+                        cur = 2;
+                        numParen++;
+                    }
+                    else if(s.equalsIgnoreCase(")")){
+                        cur = 3;
+                        numParen--;
+                    }
+                    else{ //operator and not parentheses
+                        cur = 1;
+                    }
                 }
-                else if(s.equalsIgnoreCase(")")){
-                    cur = 3;
-                    numParen--;
+                else{
+                    System.out.println(s + " -invalid character");
+                    return false;
                 }
-                else{ //operator and not parentheses
-                    cur = 1;
-                }
-            }
-            else{
-                System.out.println(s + " -invalid character");
-                return false;
             }
 
             if(numParen < 0){ // ) without matching (
@@ -71,9 +80,9 @@ public class Main {
     }
 
     private static void fillValids(Map<Integer, Set<Integer>> valids){
-        valids.put(0, new HashSet<>(Arrays.asList(1, 3)));
-        valids.put(1, new HashSet<>(Arrays.asList(0, 2)));
-        valids.put(2, new HashSet<>(Arrays.asList(0)));
-        valids.put(3, new HashSet<>(Arrays.asList(1)));
+        valids.put(0, new HashSet<>(Arrays.asList(1, 3))); //num
+        valids.put(1, new HashSet<>(Arrays.asList(0, 2))); //op
+        valids.put(2, new HashSet<>(Arrays.asList(0, 2))); // (
+        valids.put(3, new HashSet<>(Arrays.asList(1, 3))); // )
     }
 }
