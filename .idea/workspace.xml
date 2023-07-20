@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73aff7be-bf67-436c-b7a7-8c538db0d3ad" name="Changes" comment="Set up validity checking with splitting on spaces.">
+    <list default="true" id="73aff7be-bf67-436c-b7a7-8c538db0d3ad" name="Changes" comment="Changed integer checking to double.&#10;Implemented one-operation calculation function.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -65,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689557436574</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed integer checking to double.&#10;Implemented one-operation calculation function.">
+      <created>1689742050319</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689742050320</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,6 +88,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set up validity checking with splitting on spaces." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up validity checking with splitting on spaces." />
+    <MESSAGE value="Changed integer checking to double.&#10;Implemented one-operation calculation function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed integer checking to double.&#10;Implemented one-operation calculation function." />
   </component>
 </project>

@@ -22,8 +22,10 @@ public class Main {
                     continue;
                 }
                 System.out.println("valid statement");
-                System.out.println(calc.calculateOne(parts[0], parts[1], parts[2]));
-
+                //System.out.println(calc.calculateOne(parts[0], parts[1], parts[2]));
+                System.out.println(Arrays.asList(parts));
+                Double output = calc.pemdas(new ArrayList<>(Arrays.asList(parts)));
+                System.out.println(output);
             }
         }
     }
