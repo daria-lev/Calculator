@@ -11,13 +11,15 @@ public class CalculateTree extends Calculate{
     public int compute(List<String> parts){
         //find symbol, use that for root node
         CalcNode root = constructTree(parts, 0, parts.size());
+        printTree(root);
+        System.out.println();
         return -1;
     }
 
     //ignores parentheses for now
     private CalcNode constructTree(List<String> parts, int first, int last){
         CalcNode node;
-        int index = findNextSymbol(parts, 0, parts.size());
+        int index = findNextSymbol(parts, first, last);
         if(index != -1){
             String nodeValue = parts.get(index);
             node = new CalcNode(nodeValue);
@@ -43,7 +45,17 @@ public class CalculateTree extends Calculate{
                 importance = operators.get(cur);
             }
         }
+        //System.out.println("found" + ind);
         return ind;
+    }
+
+    //used for testing, should recreate original expression?
+    private void printTree(CalcNode root){
+        if(root != null){
+            printTree(root.left);
+            System.out.print(root.value);
+            printTree(root.right);
+        }
     }
 
     public class CalcNode{

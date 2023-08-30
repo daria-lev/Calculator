@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73aff7be-bf67-436c-b7a7-8c538db0d3ad" name="Changes" comment="Implemented basic tests with JUnit.">
-      <change afterPath="$PROJECT_DIR$/src/CalculateTree.java" afterDir="false" />
+    <list default="true" id="73aff7be-bf67-436c-b7a7-8c538db0d3ad" name="Changes" comment="Set up framework for tree-using calculator to function. Code untested and incomplete, but idea is there.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CalcTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalcTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalculateTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculateTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689830502009</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Set up framework for tree-using calculator to function. Code untested and incomplete, but idea is there.">
+      <created>1693281472395</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693281472395</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +116,7 @@
     <MESSAGE value="Changed integer checking to double.&#10;Implemented one-operation calculation function." />
     <MESSAGE value="Implemented full calculation for equations without parentheses. Not fully tested, will need to implement unit tests." />
     <MESSAGE value="Implemented basic tests with JUnit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented basic tests with JUnit." />
+    <MESSAGE value="Set up framework for tree-using calculator to function. Code untested and incomplete, but idea is there." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up framework for tree-using calculator to function. Code untested and incomplete, but idea is there." />
   </component>
 </project>

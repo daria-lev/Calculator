@@ -7,6 +7,7 @@ public class Main {
         Scanner user = new Scanner(System.in);
         String input = "";
         Calculate calc = new Calculate();
+        CalculateTree calc2 = new CalculateTree();
         Map<Integer, Set<Integer>> valids = new HashMap<>();
         fillValids(valids);
         System.out.println("Hello! Welcome to the calculator.");
@@ -24,8 +25,11 @@ public class Main {
                 System.out.println("valid statement");
                 //System.out.println(calc.calculateOne(parts[0], parts[1], parts[2]));
                 System.out.println(Arrays.asList(parts));
+
                 Double output = calc.pemdas(new ArrayList<>(Arrays.asList(parts)));
                 System.out.println(output);
+
+                calc2.compute(new ArrayList<>(Arrays.asList(parts)));
             }
         }
     }
