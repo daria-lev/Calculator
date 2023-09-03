@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73aff7be-bf67-436c-b7a7-8c538db0d3ad" name="Changes" comment="Set up framework for tree-using calculator to function. Code untested and incomplete, but idea is there.">
+    <list default="true" id="73aff7be-bf67-436c-b7a7-8c538db0d3ad" name="Changes" comment="Tree setup complete, appears to work based on printing. May need a tree visualizing printing function to properly check. Still cannot handle parentheses.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CalculateTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculateTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -97,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693281472395</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Tree setup complete, appears to work based on printing. May need a tree visualizing printing function to properly check. Still cannot handle parentheses.">
+      <created>1693365982511</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693365982511</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +125,7 @@
     <MESSAGE value="Implemented full calculation for equations without parentheses. Not fully tested, will need to implement unit tests." />
     <MESSAGE value="Implemented basic tests with JUnit." />
     <MESSAGE value="Set up framework for tree-using calculator to function. Code untested and incomplete, but idea is there." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up framework for tree-using calculator to function. Code untested and incomplete, but idea is there." />
+    <MESSAGE value="Tree setup complete, appears to work based on printing. May need a tree visualizing printing function to properly check. Still cannot handle parentheses." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tree setup complete, appears to work based on printing. May need a tree visualizing printing function to properly check. Still cannot handle parentheses." />
   </component>
 </project>

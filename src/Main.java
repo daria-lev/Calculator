@@ -66,7 +66,7 @@ public class Main {
                     }
                 }
                 else{
-                    System.out.println(s + " -invalid character");
+                    System.out.println(s + " -invalid character"); //will need to modify for variables to work
                     return false;
                 }
             }
@@ -75,7 +75,7 @@ public class Main {
                 System.out.println(s + " -bad paren");
                 return false;
             }
-            if(!valids.get(prev).contains(cur)){
+            if(!valids.get(prev).contains(cur)){ //bad operator/number order
                 System.out.println(s + " -bad prev");
                 return false;
             }

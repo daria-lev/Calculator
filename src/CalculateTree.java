@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class CalculateTree extends Calculate{
-    private Map<String, Integer> variables;
+    private Map<String, String> variables;
 
     public CalculateTree(){
         super();
@@ -14,6 +14,28 @@ public class CalculateTree extends Calculate{
         printTree(root);
         System.out.println();
         return -1;
+    }
+
+    private String sumTree(CalcNode root){
+        if(root != null){
+            if(operators.containsKey(root.value)){
+                String leftTotal = sumTree(root.left);
+                String rightTotal = sumTree(root.right);
+                return calculateOne(leftTotal, root.value, rightTotal);
+            }
+            try
+            {
+                Double.parseDouble(root.value); //checks if it's a number
+            }
+            catch(NumberFormatException e){ //if it's a letter
+                if(!variables.containsKey(root.value)){
+                    //ask for value
+                }
+                return variables.get(root.value);
+            }
+            return root.value;
+        }
+        return "0";
     }
 
     //ignores parentheses for now

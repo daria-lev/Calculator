@@ -62,7 +62,7 @@ public class Calculate {
     }
 
     //calculates one operation and returns the value
-    public String calculateOne(String val1, String op, String val2){
+    protected String calculateOne(String val1, String op, String val2){
         double first = Double.parseDouble(val1);
         double second = Double.parseDouble(val2);
         double output = 0;
