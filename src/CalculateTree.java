@@ -8,12 +8,13 @@ public class CalculateTree extends Calculate{
         variables = new HashMap<>(); //any variable found will be prompted for a value and stored here
     }
 
-    public int compute(List<String> parts){
+    public double compute(List<String> parts){
         //find symbol, use that for root node
         CalcNode root = constructTree(parts, 0, parts.size());
         printTree(root);
         System.out.println();
-        return -1;
+        String output = sumTree(root);
+        return Double.parseDouble(output);
     }
 
     private String sumTree(CalcNode root){
@@ -27,9 +28,20 @@ public class CalculateTree extends Calculate{
             {
                 Double.parseDouble(root.value); //checks if it's a number
             }
-            catch(NumberFormatException e){ //if it's a letter
+            catch(NumberFormatException e){ //if it's a letter (ignore for now since it won't work with validation)
                 if(!variables.containsKey(root.value)){
-                    //ask for value
+                    Scanner s = new Scanner(System.in);
+                    boolean gotAnswer = false;
+                    while(!gotAnswer){
+                        System.out.println("What value does " + root.value + " represent?");
+                        if(s.hasNextDouble()){
+                            gotAnswer = true;
+                            variables.put(root.value, s.next());
+                        }
+                        else{
+                            System.out.println("Please input a valid number.");
+                        }
+                    }
                 }
                 return variables.get(root.value);
             }

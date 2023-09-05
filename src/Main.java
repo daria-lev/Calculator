@@ -9,8 +9,19 @@ public class Main {
         Calculate calc = new Calculate();
         CalculateTree calc2 = new CalculateTree();
         Map<Integer, Set<Integer>> valids = new HashMap<>();
+        boolean useTree = false;
         fillValids(valids);
         System.out.println("Hello! Welcome to the calculator.");
+
+        while(!input.equals("1") && !input.equals("2")){
+            System.out.println("Would you like to use Calculator version 1 or 2?");
+            input = user.nextLine();
+            if(input.equals("2")){
+                useTree = true;
+            }
+        }
+
+        input = "";
 
         //asking:
         while(!input.equalsIgnoreCase("Q")){
@@ -18,7 +29,7 @@ public class Main {
             input = user.nextLine();
             if(!input.equalsIgnoreCase("Q")){
                 String[] parts = input.split(" "); //temp probably, creates list of nums and ops
-                if(!isValidStatement(parts, calc, valids)){
+                if(!isValidStatement(parts, calc, valids, useTree)){
                     System.out.println("invalid statement");
                     continue;
                 }
@@ -26,16 +37,21 @@ public class Main {
                 //System.out.println(calc.calculateOne(parts[0], parts[1], parts[2]));
                 System.out.println(Arrays.asList(parts));
 
-                Double output = calc.pemdas(new ArrayList<>(Arrays.asList(parts)));
-                System.out.println(output);
+                if(useTree){
+                    double output2 = calc2.compute(new ArrayList<>(Arrays.asList(parts)));
+                    System.out.println(output2);
+                }
+                else{
+                    Double output = calc.pemdas(new ArrayList<>(Arrays.asList(parts)));
+                    System.out.println(output);
+                }
 
-                calc2.compute(new ArrayList<>(Arrays.asList(parts)));
             }
         }
     }
 
     //checks if it's a computable statement
-    public static boolean isValidStatement(String[] parts, Calculate calc, Map<Integer, Set<Integer>> valids){
+    public static boolean isValidStatement(String[] parts, Calculate calc, Map<Integer, Set<Integer>> valids, boolean useTree){
         //checking that it is a valid expression
         int prev = 1; //0 means integer, 1 means op, 2 means open paren, 3 means close
         int cur = 0;
@@ -66,8 +82,10 @@ public class Main {
                     }
                 }
                 else{
-                    System.out.println(s + " -invalid character"); //will need to modify for variables to work
-                    return false;
+                    if(!useTree){
+                        System.out.println(s + " - invalid symbol found."); //will need to modify for variables to work
+                        return false;
+                    }
                 }
             }
 
